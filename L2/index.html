@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Webbteknik 2 — Laboration L2</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Webbteknik 2</h1>
+		<h2>Laboration L2 - Funktioner och villkorsstyrning</h2>
+	</header>
+	<main>
+		<h2>Frukter</h2>
+		<img src="img/nofruit.png" alt="frukt" id="fruitImg"> <!-- Vald frukt -->
+		<form id="inputForm">
+			<label for="input1">Fruktnr (1-5):</label>
+			<input type="text" id="input1">
+			<button type="button" id="btn1">Visa bild</button>
+			<label for="input2">Antal (1-9):</label>
+			<input type="text" id="input2">
+			<button type="button" id="btn2">Lägg till bilder</button>
+		</form>
+		<div id="message"></div> <!-- Här skriver programmet meddelanden till användaren -->
+		<hr>
+		<h3>Valda frukter</h3>
+		<div id="selectedFruits">
+			 <!-- Här ska det med JavaScript läggas in img-taggar för valda frukter -->
+		</div>
+	</main>
+	<footer>
+		<p>Laboration L2 i Webbdteknik 2</p>
+	</footer>
+</body>
+
+</html>

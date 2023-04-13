@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+#booking fieldset {
+    background-color: #FED;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 0.6em;
+    white-space: nowrap;
+}
+#booking legend {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#room {
+    grid-template-columns: min-content auto;
+}
+#room label {
+	grid-column: 1/2;
+}
+#room label:last-of-type {
+	grid-column: 2/3;
+}
+
+#date {
+    grid-template-columns: 1fr 1fr;
+}
+
+#facilities p {
+	margin: 0;
+	font-style: italic;
+}
+
+#total span {
+	font-size: 1.3em;
+}
+
+#campaign input {
+	max-width: 10ch;
+}
+
+#customer {
+    grid-template-columns: min-content auto;
+}
+#customer input {
+    max-width: 40ch;
+}
+#customer #zipcode {
+    max-width: 6ch;
+}
+#customer span { /* Felmeddelanden */
+	font-size: 0.8em;
+	font-style: italic;
+	color: #E00;
+}
+
+#send {
+    display: block;
+    margin-left: auto;
+    font-size: 1.2em;
+    border-radius: 0.6em;
+    background-color: #7BE;
+}
+
+#send:hover {
+    background-color: #7E8;
+}
+
+@media screen and (max-width: 560px) {
+    #booking fieldset {
+        grid-template-columns: auto;
+        gap: 0.2em;
+    }
+}

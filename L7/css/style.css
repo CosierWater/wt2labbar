@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/* Font för brickorna */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+	user-select: none; /* Sidans text kan inte markeras och därmed inte dras */
+}
+
+/* ----- Rutan med totalpoäng och antal spel ----- */
+#userInfo {
+	background-color: #FC6;
+	border: 3px solid #666;
+	float: right;
+	width: min-content;
+	white-space: nowrap;
+	text-align: right;
+	font-size: 1.5em;
+	padding: 0.1em 0.2em;
+	margin: 0.6em;
+}
+#userInfo p {
+	margin: 0;
+	padding: 0;
+}
+
+/* ----- Spelplanen ----- */
+#board {
+    float: left;
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* Plats för nya brickor och knapp för det */
+#control {
+	float: right;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+#newTiles {
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+/* Alla rutor på spelplanen, inkl. de där det ska läggas bock eller kryss,
+   samt rutorna för nya brickor. */
+#board div,
+#newTiles div {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 60px;
+    height: 60px;
+    font-family: Fredoka One;
+    font-size: 36px;
+    display: flex; /* Flex inom rutan, för att kunna centrera texten */
+    justify-content: center; /* Centrera horisontellt */
+    align-items: center; /* centrera vertikalt */
+}
+
+/* Olika klasser för rutorna */
+.empty { /* Tom plats för bricka */
+	border: 2px solid #AAC;
+	background-color: transparent;
+}
+.filled { /* Bricka där siffran visas */
+	border: 2px solid #600;
+	background-color: #FFF;
+    color: #980e0e;
+}
+/* ----- Dessa två klasser finns med i HTML-koden, för att markera olika typer av element.
+         I JavaScript kan man ta fram dem med getElementsByClassname.
+		 De har dock ingen speciell stil här.
+.tile { Alla div-element som är platser för brickor
+}
+.mark { Alla div-element som är plats för bock eller kryss
+}
+*/
+.check:before {
+	content: "\02713"; /* En bock */
+	color: #0C0;
+}
+.cross:before {
+	content: "\02717"; /* Ett kryss */
+	color: #C00;
+}
+
+/* Plats för meddelanden under spelplanen */
+#message {
+	padding-top: 1.5em;
+	font-size: 1.5em;
+	clear: both;
+}
+
+/* ----- Stil för VG-uppgiften ----- */
+main {
+	position: relative;
+}
+#ghost {
+	position: absolute;
+	top: 120px;
+	left: 250px;
+	opacity: 0.8;
+	visibility: hidden;
+}
+.ghostTile { /* Stil för bricka som tas bort av spöket */
+	border: 2px solid #006;
+	background-color: #C99;
+}
+
+/* ----- Stil för guldstjärneuppgiften ----- */
+#moveCount {
+	font-size: 2em;
+}

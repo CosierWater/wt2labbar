@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Webbteknik 2 — Laboration L4</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Webbteknik 2</h1>
+		<h2>Laboration L4 - Händelser och drag- and drop</h2>
+	</header>
+	<main>
+		<h2>Svenska städer</h2>
+		<p>Här ska du känna igen motiv från städer i Sverige. Dra ett stadsnamn i listan till varje bild.<br>
+		Det finns fler namn i listan än bilder, så en del lämnar du kvar.</p>
+		<p><button type="button" id="startGameBtn">Starta spelet</button></p>
+		<div id="board">
+			<div id="wordList">
+				<ul> <!-- li-elementen ska fyllas i med JavaScript-programmet-->
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+				</ul>
+			</div>
+			<div id="imgList">
+				<div>
+					<img src="img/empty.png" alt="Stadsbild" draggable="false">
+					<p class="userAnswer"></p>
+					<p class="correctAnswer"></p>
+				</div>
+				<div>
+					<img src="img/empty.png" alt="Stadsbild" draggable="false">
+					<p class="userAnswer"></p>
+					<p class="correctAnswer"></p>
+				</div>
+				<div>
+					<img src="img/empty.png" alt="Stadsbild" draggable="false">
+					<p class="userAnswer"></p>
+					<p class="correctAnswer"></p>
+				</div>
+				<div>
+					<img src="img/empty.png" alt="Stadsbild" draggable="false">
+					<p class="userAnswer"></p>
+					<p class="correctAnswer"></p>
+				</div>
+			</div>
+			<div>
+				<img id="largeImg" src="img/empty.png" alt="Förstorad stadsbild" draggable="false">
+			</div>
+		</div> <!-- End board -->
+		<p>Dra ett namn till varje bild och klicka sedan på följande knapp. 
+			<button id="checkAnswersBtn">Kontrollera svar</button>
+		</p>
+		<div id="message"></div> <!-- Här skriver programmet meddelanden till användaren -->
+	</main>
+	<footer>
+		<p>Laboration L4 i Webbdteknik 2</p>
+	</footer>
+</body>
+
+</html>

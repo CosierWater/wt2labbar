@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Webbteknik 2 — Laboration L5</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Webbteknik 2</h1>
+		<h2>Laboration L5 - Dynamisk HTML och timers</h2>
+	</header>
+	<main>
+		<h2>Spelet Jaga vildsvin</h2>
+		<form>
+			<select id="carMenu">
+				<option>Välj bil ...</option>
+				<option>Ferrari Testarossa</option>
+				<option>Jeep Wrangler</option>
+				<option>VW Beetle</option>
+			</select>
+		</form>
+		<div id="board">
+			<img id="car" src="img/ferrari_right.png" alt="bil">
+			<img id="pig" src="img/pig.png" alt="gris">
+		</div>
+		<img class="alignRight" src="img/keys.png" alt="Tangenter för att styra bilen">
+		<div>
+			<button type="button" id="startBtn">Starta spelet</button>
+			<button type="button" id="stopBtn">Stoppa spelet</button>
+		</div>
+		<p>Vildsvin: <span id="pigNr">0</span>
+			Antal träffar: <span id="hitCounter">0</span>
+		</p>
+	</main>
+	<footer>
+		<p>Laboration L5 i Webbdteknik 2</p>
+	</footer>
+</body>
+
+</html>

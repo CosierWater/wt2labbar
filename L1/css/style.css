@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+img {
+	float: right;
+	width: 400px;
+	margin-bottom: 20px;
+}
+
+#inputForm {
+	display: grid;
+	grid-template-columns: max-content auto;
+	gap: 0.5em;
+	padding-bottom: 2em;
+}
+#inputForm input[type=text] {
+	width: 5ch;
+}
+
+/* ----- Media queries ----- */
+@media screen and (max-width:700px) {
+	img {
+		float: none;
+	}
+}
+
+@media screen and (max-width:400px) {
+	#inputForm {
+		grid-template-columns: 100%;
+	}
+}

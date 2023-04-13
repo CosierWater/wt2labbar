@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Webbteknik 2 — Laboration L1</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/error.js"></script> <!-- Referens till js-filen med fel -->
+</head>
+
+<body>
+	<header>
+		<h1>Webbteknik 2</h1>
+		<h2>Laboration L1 - Variabler och beräkningar</h2>
+		<h3>— Programmet innehåller fel, som du ska hitta —</h3>
+	</header>
+	<main>
+		<h2>Beräkning av area</h2>
+		<img src="img/shapes.png" alt="Form för rektangel, ellips och triangel">
+		<p>Ange längd och bredd för ytan:</p>
+		<form id="inputForm">
+			<!-- Textfält för att ge indata -->
+			<label for="input1">Längd:</label>
+			<span><input type="text" id="input1"> meter</span>
+			<label for="input2">Bredd:</label>
+			<span><input type="text" id="input2"> meter</span>
+		</form>
+		<button type="button" id="runBtn">Kör programmet</button>
+		<hr>
+		<h3>Resultat</h3>
+		<!-- Resultatet av programmet ska skrivas i detta div-element. -->
+		<div id="result"></div>
+	</main>
+	<footer>
+		<p>Laboration L1 i Webbdteknik 2</p>
+	</footer>
+</body>
+
+</html>

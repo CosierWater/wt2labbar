@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#inputForm {
+	display: grid;
+	grid-template-columns: repeat(3,max-content);
+	gap: 0.5em;
+	padding-bottom: 2em;
+}
+#inputForm input[type=text] {
+	width: 5ch;
+}
+
+#message {
+	color: #ff0000;
+}
+
+#fruitImg { /* Stora bilden till höger */
+	float: right;
+	width: 200px;
+	margin-bottom: 20px;
+}
+
+#selectedFruits img { /* Små bilder som läggs till med JavaScript */
+	width: 70px;
+	margin-right: 5px;
+}
+
+/* ----- Media queries ----- */
+@media screen and (max-width:600px) {
+	#fruitImg {
+		float: none;
+	}
+}
+
+@media screen and (max-width:350px) {
+	#inputForm {
+		grid-template-columns: max-content;
+	}
+}

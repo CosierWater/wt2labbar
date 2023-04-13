@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Webbteknik 2 — Laboration L7</title>
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Webbteknik 2</h1>
+		<h2>Laboration L7 - Ett litet spel</h2>
+	</header>
+	<main>
+		<div id="userInfo">
+			<p>Total poäng: <span id="totPoints">0</span></p>
+			<p>Antal spel: <span id="countGames">0</span></p>
+		</div>
+		<p>Spelplanen består av 16 platser dit du ska dra brickor med siffror. Målet är att i så många rader och kolumner som möjligt få stigande serier, dvs för varje ruta ska siffran till höger eller under vara större. Totalt finns det 40 brickor med talen 1 till 40. Ur dessa får du fyra brickor i taget och ska dra dem till spelplanen. Du får 1 poäng för varje rad eller kolumn som har en stigande serie. Du kan spela flera gånger och på så sätt samla ihop fler poäng.</p>
+		<p><button type="button" id="newGameBtn">Nytt spel</button></p>
+
+		<div id="board"> <!-- Spelplanen -->
+			<!-- I div-elementen används klasserna s1, s2, etc. för att markera de brickor som ingår
+				 i en serie (rad eller kolumn). s1 - s4 är raderna och s5 - s8 är kolumnerna.
+				 Klasserna s1mark, s2mark, etc. markerar de element där det ska läggas en bock eller
+				 ett kryss, då serien kontrollerats i slutet av spelet.
+				 Klassen empty används för en tom ruta. Då det läggs en bricka i rutan,
+				 ska klassen bytas till filled. -->
+			<div class="tile s1 s5 empty"></div>
+			<div class="tile s1 s6 empty"></div>
+			<div class="tile s1 s7 empty"></div>
+			<div class="tile s1 s8 empty"></div>
+			<div class="mark" id="s1mark"></div>
+
+			<div class="tile s2 s5 empty"></div>
+			<div class="tile s2 s6 empty"></div>
+			<div class="tile s2 s7 empty"></div>
+			<div class="tile s2 s8 empty"></div>
+			<div class="mark" id="s2mark"></div>
+
+			<div class="tile s3 s5 empty"></div>
+			<div class="tile s3 s6 empty"></div>
+			<div class="tile s3 s7 empty"></div>
+			<div class="tile s3 s8 empty"></div>
+			<div class="mark" id="s3mark"></div>
+
+			<div class="tile s4 s5 empty"></div>
+			<div class="tile s4 s6 empty"></div>
+			<div class="tile s4 s7 empty"></div>
+			<div class="tile s4 s8 empty"></div>
+			<div class="mark" id="s4mark"></div>
+
+			<div class="mark" id="s5mark"></div>
+			<div class="mark" id="s6mark"></div>
+			<div class="mark" id="s7mark"></div>
+			<div class="mark" id="s8mark"></div>
+		</div> <!-- Slut på spelplanen -->
+
+		<div id="control">
+			<div id="newTiles"> <!-- Nya brickor som väljs slumpmässigt -->
+				<div class="tile empty"></div>
+				<div class="tile empty"></div>
+				<div class="tile empty"></div>
+				<div class="tile empty"></div>
+			</div>
+			<button type="button" id="newTilesBtn">Nya brickor</button>
+
+			<!-- Följande element används för guldstjärneuppgiften.
+				 Ta bort kommentaren kring det, om du utför den uppgiften. -->
+			<p>Antal möjliga flytt i spelplanen som återstår: <span id="moveCount">0</span></p>
+
+		</div>
+		<div id="message"></div> <!-- Meddelande till användaren -->
+		<img src="img/ghost.png" alt="spöke" id="ghost"> <!-- Används i VG-uppgiften -->
+	</main>
+	<footer>
+		<p>Laboration L7 i Webbdteknik 2</p>
+	</footer>
+</body>
+
+</html>
